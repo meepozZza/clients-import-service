@@ -57,3 +57,8 @@ items: ….
 
 Файл для импорта в xlsx формате можно скачать здесь: https://docs.google.com/spreadsheets/d/1ocBRhoGkzeKRHgepf07V0UCUAon2NFPl6UwMzeoXK0E/edit?usp=sharing
 
+Как запустить
+- make build
+
+Запуск тестов
+- make test
