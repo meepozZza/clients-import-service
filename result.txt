@@ -1,0 +1,1 @@
+{"37756":["Cell A37756 is not integer."],"46161":["Cell C46161 hasn't date format."],"59986":["Cell C59986 hasn't date format."]}
