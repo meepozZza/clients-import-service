@@ -9,9 +9,17 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/sanctum": "^4.0",
+        "laravel/tinker": "^2.10.1",
+        "maatwebsite/excel": "^3.1",
+        "openspout/openspout": "^4",
+        "phpoffice/phpspreadsheet": "^1",
+        "predis/predis": "^3.0",
+        "prettus/l5-repository": "^2.10",
+        "pusher/pusher-php-server": "^7.2",
+        "spatie/laravel-query-builder": "^6.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
