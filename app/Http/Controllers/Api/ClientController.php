@@ -31,9 +31,24 @@ class ClientController extends Controller
     {
         $this->authorize('index', Client::class);
 
+        $i = 0;
+
         return ClientResource::collection(
             $repository->get()
-                ->when($request->has('groupBy'), fn ($r) => $r->groupBy($request->get('groupBy'))),
+                ->when(
+                    $request->has('groupBy'),
+                    fn ($q) => $q->groupBy($request->get('groupBy'))->when(
+                        str_contains($request->get('groupBy'), 'date'),
+                        fn ($q) => $q->mapWithKeys(function ($item, $key) use (&$i) {
+                            return [
+                                $i++ => [
+                                    'date' => $key,
+                                    'items' => $item,
+                                ]
+                            ];
+                        })
+                    )
+                )
         );
     }
 
